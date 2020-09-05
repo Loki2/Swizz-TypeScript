@@ -1,20 +1,22 @@
-import mongoose from 'mongoose';
+import { getModelForClass, prop  } from '@typegoose/typegoose';
+import { ObjectType, Field, ID } from 'type-graphql'
 
-const UserSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
-  }
-})
+@ObjectType({description: 'User Model'})
+export class User {
+  @Field(() => ID)
+  id!: string;
 
-const UserModel = mongoose.model('User', UserSchema);
+  @Field()
+  @prop({ required: true, trim: true })
+  username!: string;
 
-export default UserModel;
+  @Field()
+  @prop({ required: true, trim: true, unique: true })
+  email!: string;
+
+  @prop({ required: true })
+  password!: string;
+
+}
+
+export const UserModel = getModelForClass(User)

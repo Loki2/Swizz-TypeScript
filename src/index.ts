@@ -25,7 +25,7 @@ const Server = async () => {
     )
 
     const app = express();
-    const server = ApolloServer()
+    const server = await ApolloServer()
 
     server.applyMiddleware({app})
 

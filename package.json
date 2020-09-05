@@ -24,6 +24,7 @@
     "type-graphql": "^1.0.0"
   },
   "devDependencies": {
+    "@typegoose/typegoose": "^7.3.4",
     "@types/bcryptjs": "^2.4.2",
     "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.8",
