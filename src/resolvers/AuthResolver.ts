@@ -31,6 +31,7 @@ export class AuthResolver {
         await newUser.save()
 
         return newUser
+        
       } catch (error) {
         throw error
       }
