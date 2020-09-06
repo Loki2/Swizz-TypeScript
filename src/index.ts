@@ -6,16 +6,18 @@ import mongoose from 'mongoose';
 config()
 const {
   PORT,
-  DB_USER,
-  DB_PASSWORD,
-  DB_ENDPOINT,
-  DB_NAME
+  // DB_USER,
+  // DB_PASSWORD,
+  // DB_ENDPOINT,
+  // DB_NAME,
+  DB_URI
 } = process.env
 
 const Server = async () => {
   try {
     //Connect To Database
-    await mongoose.connect( `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_ENDPOINT}/${DB_NAME}?retryWrites=true&w=majority`, 
+    //`mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_ENDPOINT}/${DB_NAME}?retryWrites=true&w=majority`
+    await mongoose.connect( `${DB_URI}`, 
       {
         useNewUrlParser: true,
         useCreateIndex: true,
