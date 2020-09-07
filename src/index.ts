@@ -2,6 +2,7 @@ import {config} from 'dotenv';
 import express from 'express';
 import ApolloServer from './apolloSever';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser'
 
 config()
 const {
@@ -25,8 +26,9 @@ const Server = async () => {
         useFindAndModify: false
       }
     )
-
+    //MiddleWare
     const app = express();
+    app.use(cookieParser())
     const server = await ApolloServer()
 
     server.applyMiddleware({app})

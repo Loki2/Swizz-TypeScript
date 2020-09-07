@@ -6,7 +6,14 @@ export enum RoleOptions {
   superUser = 'SUPERADMIN'
 }
 
-export interface Appcontext {
-  req: Request; 
+export interface AppRequest extends Request {
+  userId?: string
+  tokenVersion?: number 
+}
+
+
+
+export interface AppContext {
+  req: AppRequest; 
   res: Response
 }

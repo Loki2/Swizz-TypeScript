@@ -1,0 +1,380 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200907.163002.7993.0.001.json",
+    "dumpEventTime": "2020-09-07T16:30:02Z",
+    "dumpEventTimeStamp": "1599471002386",
+    "processId": 7993,
+    "cwd": "/home/loki/Desktop/Projects/Node-TypeScript/Swizz",
+    "commandLine": [
+      "/home/loki/.nvm/versions/node/v11.15.0/bin/node",
+      "/home/loki/Desktop/Projects/Node-TypeScript/Swizz/node_modules/.bin/ts-node-dev",
+      "--respawn",
+      "src/index.ts"
+    ],
+    "nodejsVersion": "v11.15.0",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.12",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "11.15.0",
+      "v8": "7.0.276.38-node.19",
+      "uv": "1.27.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.37.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v11.15.0/node-v11.15.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v11.15.0/node-v11.15.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "5.4.0-45-generic",
+    "osVersion": "#49~18.04.2-Ubuntu SMP Wed Aug 26 16:29:02 UTC 2020",
+    "osMachine": "x86_64",
+    "host": "loki"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000a702fd",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x000000000095ccb3",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b3dbde",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b3de14",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f3ce52",
+      "symbol": " [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f3cf58",
+      "symbol": "v8::internal::Heap::CheckIneffectiveMarkCompact(unsigned long, double) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f49678",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f4a18b",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f4cec1",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f170f4",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x00000000011cd3fe",
+      "symbol": "v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*) [/home/loki/.nvm/versions/node/v11.15.0/bin/node]"
+    },
+    {
+      "pc": "0x0000229f7394fc5d",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1500495872,
+    "totalCommittedMemory": 1495713720,
+    "usedMemory": 1461218168,
+    "availableMemory": 30299560,
+    "memoryLimit": 1526909922,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 42224,
+        "capacity": 515584,
+        "used": 33520,
+        "available": 482064
+      },
+      "new_space": {
+        "memorySize": 4194304,
+        "committedMemory": 1202592,
+        "capacity": 2062336,
+        "used": 101944,
+        "available": 1960392
+      },
+      "old_space": {
+        "memorySize": 1470828544,
+        "committedMemory": 1470280312,
+        "capacity": 1440509240,
+        "used": 1438874216,
+        "available": 1635024
+      },
+      "code_space": {
+        "memorySize": 4194304,
+        "committedMemory": 3648192,
+        "capacity": 3223808,
+        "used": 3223808,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1060864,
+        "committedMemory": 846832,
+        "capacity": 638960,
+        "used": 638960,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 19693568,
+        "committedMemory": 19693568,
+        "capacity": 44567800,
+        "used": 18345720,
+        "available": 26222080
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 177.983,
+    "kernelCpuSeconds": 5.42363,
+    "cpuConsumptionPercent": 4.94358,
+    "maxRss": 1560989696,
+    "pageFaults": {
+      "IORequired": 25,
+      "IONotRequired": 1513559
+    },
+    "fsActivity": {
+      "reads": 84328,
+      "writes": 744
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 66.3101,
+    "kernelCpuSeconds": 3.30047,
+    "cpuConsumptionPercent": 1.8763,
+    "fsActivity": {
+      "reads": 84000,
+      "writes": 744
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "npm_package_devDependencies__types_node": "^14.6.4",
+    "SDKMAN_VERSION": "5.9.0+555",
+    "npm_package_dependencies_passport_google_oauth20": "^2.0.0",
+    "LC_TIME": "en_US.UTF-8",
+    "USER": "loki",
+    "npm_package_devDependencies__types_passport": "^1.0.4",
+    "npm_package_dependencies_bcryptjs": "^2.4.3",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_user_agent": "yarn/1.22.5 npm/? node/v11.15.0 linux x64",
+    "XDG_SEAT": "seat0",
+    "TEXTDOMAIN": "im-config",
+    "npm_config_bin_links": "true",
+    "SSH_AGENT_PID": "3277",
+    "XDG_SESSION_TYPE": "x11",
+    "npm_node_execpath": "/home/loki/.nvm/versions/node/v11.15.0/bin/node",
+    "npm_config_init_version": "1.0.0",
+    "SHLVL": "1",
+    "npm_package_devDependencies__types_express": "^4.17.8",
+    "QT4_IM_MODULE": "xim",
+    "HOME": "/home/loki",
+    "OLDPWD": "/home/loki",
+    "LESS": "-R",
+    "DESKTOP_SESSION": "ubuntu",
+    "NVM_BIN": "/home/loki/.nvm/versions/node/v11.15.0/bin",
+    "ZSH": "/home/loki/.oh-my-zsh",
+    "LSCOLORS": "Gxfxcxdxbxegedabagacad",
+    "npm_config_init_license": "MIT",
+    "GRADLE_HOME": "/opt/gradle/gradle-6.2",
+    "GNOME_SHELL_SESSION_MODE": "ubuntu",
+    "GTK_MODULES": "gail:atk-bridge",
+    "PAGER": "less",
+    "YARN_WRAP_OUTPUT": "false",
+    "npm_config_version_tag_prefix": "v",
+    "LC_MONETARY": "en_US.UTF-8",
+    "npm_package_devDependencies_rimraf": "^3.0.2",
+    "npm_package_dependencies_reflect_metadata": "^0.1.13",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "npm_package_dependencies_dotenv": "^8.2.0",
+    "COLORTERM": "truecolor",
+    "npm_package_devDependencies_typescript": "^4.0.2",
+    "NVM_DIR": "/home/loki/.nvm",
+    "npm_package_dependencies_passport": "^0.4.1",
+    "IM_CONFIG_PHASE": "2",
+    "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+    "npm_package_scripts_dev": "ts-node-dev --respawn src/index.ts",
+    "LOGNAME": "loki",
+    "GTK_IM_MODULE": "ibus",
+    "DESKTOP_AUTOSTART_ID": "10e179aed7fcd5f594159946719194403500000031890007",
+    "UPDATE_ZSH_DAYS": "13",
+    "SDKMAN_CANDIDATES_API": "https://api.sdkman.io/2",
+    "_": "/usr/bin/yarn",
+    "npm_package_dependencies_express": "^4.17.1",
+    "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+    "npm_package_devDependencies__types_graphql": "^14.5.0",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "XDG_SESSION_ID": "4",
+    "USERNAME": "loki",
+    "TERM": "xterm-256color",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "npm_package_scripts_start": "npm run build && node dist/index.js",
+    "npm_config_ignore_scripts": "",
+    "WINDOWPATH": "2",
+    "npm_package_devDependencies__types_mongoose": "^5.7.36",
+    "npm_package_devDependencies__typegoose_typegoose": "^7.3.4",
+    "PATH": "/tmp/yarn--1599467292385-0.9676767333817307:/home/loki/Desktop/Projects/Node-TypeScript/Swizz/node_modules/.bin:/home/loki/.config/yarn/link/node_modules/.bin:/home/loki/.yarn/bin:/home/loki/.nvm/versions/node/v11.15.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/loki/.nvm/versions/node/v11.15.0/lib/node_modules/npm/bin/node-gyp-bin:/home/loki/.nvm/versions/node/v11.15.0/bin/node_modules/npm/bin/node-gyp-bin:/home/loki/.deno/bin:/users/loki/flutter/bin:/home/loki/.nvm/versions/node/v11.15.0/bin:/home/loki/.local/bin:/opt/gradle/gradle-6.2/bin:/opt/GitHub Desktop:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/loki/.dotnet/tools:/home/loki/Android/Sdk/emulator:/home/loki/Android/Sdk/tools:/home/loki/Android/Sdk/tools/bin:/home/loki/Android/Sdk/platform-tools:/<flutter/extracted/location>/bin",
+    "NODE": "/home/loki/.nvm/versions/node/v11.15.0/bin/node",
+    "SESSION_MANAGER": "local/loki:@/tmp/.ICE-unix/3189,unix/loki:/tmp/.ICE-unix/3189",
+    "PAPERSIZE": "letter",
+    "SDKMAN_CANDIDATES_DIR": "/home/loki/.sdkman/candidates",
+    "npm_package_name": "Swizz",
+    "XDG_MENU_PREFIX": "gnome-",
+    "LC_ADDRESS": "en_US.UTF-8",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "GNOME_TERMINAL_SCREEN": "/org/gnome/Terminal/screen/a725fd16_a97f_4fc3_9612_d897d6912820",
+    "S_COLORS": "auto",
+    "DISPLAY": ":1",
+    "DENO_INSTALL": "/home/loki/.deno",
+    "LANG": "en_US.UTF-8",
+    "XDG_CURRENT_DESKTOP": "ubuntu:GNOME",
+    "LC_TELEPHONE": "en_US.UTF-8",
+    "npm_package_devDependencies_ts_node_dev": "^1.0.0-pre.62",
+    "npm_package_devDependencies__types_cookie_parser": "^1.4.2",
+    "GNOME_TERMINAL_SERVICE": ":1.73",
+    "XMODIFIERS": "@im=ibus",
+    "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "SDKMAN_DIR": "/home/loki/.sdkman",
+    "SDKMAN_PLATFORM": "Linux64",
+    "npm_lifecycle_script": "ts-node-dev --respawn src/index.ts",
+    "npm_package_devDependencies__types_jsonwebtoken": "^8.5.0",
+    "npm_package_main": "dist/index.js",
+    "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+    "npm_package_devDependencies__types_passport_facebook": "^2.1.10",
+    "npm_config_version_git_message": "v%s",
+    "SHELL": "/usr/bin/zsh",
+    "LC_NAME": "en_US.UTF-8",
+    "npm_lifecycle_event": "dev",
+    "npm_package_dependencies_type_graphql": "^1.0.0",
+    "npm_package_version": "1.0.0",
+    "GDMSESSION": "ubuntu",
+    "QT_ACCESSIBILITY": "1",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"dev\"],\"original\":[\"run\",\"dev\"]}",
+    "npm_package_dependencies_graphql": "^15.3.0",
+    "npm_package_scripts_build": "rimraf dist && tsc",
+    "npm_package_devDependencies__types_passport_google_oauth20": "^2.0.3",
+    "LC_MEASUREMENT": "en_US.UTF-8",
+    "npm_package_devDependencies__types_bcryptjs": "^2.4.2",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_git_sign": "",
+    "LC_IDENTIFICATION": "en_US.UTF-8",
+    "TEXTDOMAINDIR": "/usr/share/locale/",
+    "GPG_AGENT_INFO": "/run/user/1000/gnupg/S.gpg-agent:0:1",
+    "npm_package_dependencies_mongoose": "^5.10.3",
+    "npm_package_license": "MIT",
+    "npm_config_strict_ssl": "true",
+    "QT_IM_MODULE": "ibus",
+    "XDG_VTNR": "2",
+    "PWD": "/home/loki/Desktop/Projects/Node-TypeScript/Swizz",
+    "npm_execpath": "/usr/share/yarn/bin/yarn.js",
+    "CLUTTER_IM_MODULE": "xim",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
+    "ANDROID_HOME": "/home/loki/Android/Sdk",
+    "NVM_CD_FLAGS": "-q",
+    "npm_package_dependencies_apollo_server_express": "^2.17.0",
+    "LC_NUMERIC": "en_US.UTF-8",
+    "npm_package_dependencies_cookie_parser": "^1.4.5",
+    "npm_config_save_prefix": "^",
+    "npm_config_ignore_optional": "",
+    "LC_PAPER": "en_US.UTF-8",
+    "npm_package_dependencies_jsonwebtoken": "^8.5.1",
+    "VTE_VERSION": "5202",
+    "npm_package_dependencies_passport_facebook": "^3.0.0",
+    "INIT_CWD": "/home/loki/Desktop/Projects/Node-TypeScript/Swizz"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 16777216,
+      "hard": 16777216
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 4096,
+      "hard": 4096
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 29328,
+      "hard": 29328
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}
